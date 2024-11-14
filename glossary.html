@@ -13,7 +13,7 @@
 <body>
     <nav class="sidebar">
         <div class="nav-header animate__animated animate__fadeIn">
-            <h2>ExtendScript Reference 📚</h2>
+            <h2>ExtendScript Reference <span class="emoji">📚</span></h2>
             <p class="nav-subtitle">Your complete guide to ExtendScript terms!</p>
         </div>
         <ul class="nav-items">
@@ -31,7 +31,7 @@
 
     <main class="content">
         <div class="hero animate__animated animate__fadeIn">
-            <h1>ExtendScript Glossary 📚</h1>
+            <h1>ExtendScript Glossary <span class="emoji">📚</span></h1>
             <p class="hero-text">Your complete reference for ExtendScript terminology!</p>
             <p class="hero-subtitle">Search, learn, and master the language of After Effects automation 🎯</p>
         </div>
@@ -44,6 +44,34 @@
             <h3>No matching terms found 🔍</h3>
             <p>Try a different search term or browse by category below.</p>
         </div>
+
+        <section class="category-section">
+            <h2 class="category-title">Basic Data Types 💾</h2>
+            <div class="glossary-list">
+                <div class="glossary-item" data-terms="string text characters words quotes">
+                    <div class="glossary-term">string</div>
+                    <div class="glossary-definition">
+                        Text data wrapped in quotes, like "Hello" or 'After Effects'. Used for layer names, file paths, and any text-based information.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="number numeric integer float decimal">
+                    <div class="glossary-term">number</div>
+                    <div class="glossary-definition">
+                        Any numeric value, like 42 or 3.14. Used for coordinates, opacity values, scale factors, and any mathematical calculations.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="boolean true false condition flag">
+                    <div class="glossary-term">boolean</div>
+                    <div class="glossary-definition">
+                        A true/false value. Used for layer visibility, toggles, and condition checks in your scripts.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="category-section">
             <h2 class="category-title">Variables & Scope 🔍</h2>
             <div class="glossary-list">
@@ -81,18 +109,52 @@
                         <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
                     </div>
                 </div>
-                <div class="glossary-item" data-terms="array list collection data structure">
+                <div class="glossary-item" data-terms="array list collection items sequence">
                     <div class="glossary-term">array</div>
                     <div class="glossary-definition">
-                        A list-like object that can store multiple values in a single variable. In ExtendScript, arrays can hold any type of data but have limited methods compared to modern JavaScript.
+                        A list of values stored together, like ["Background", "Logo", "Text"]. Perfect for managing multiple layers or effects.
                         <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
                     </div>
                 </div>
-                <div class="glossary-item" data-terms="object data structure properties methods">
+                <div class="glossary-item" data-terms="object properties methods collection key value">
                     <div class="glossary-term">object</div>
                     <div class="glossary-definition">
-                        A container for related data and/or functions. In ExtendScript, objects are especially important as they're used to interact with After Effects (like app.project or comp.layer).
+                        A collection of related properties and values, like a layer's position, scale, and rotation. Most things in After Effects are objects.
                         <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">JavaScript Fundamentals ✨</h2>
+            <div class="glossary-list">
+                <div class="glossary-item" data-terms="operator arithmetic math plus minus multiply divide">
+                    <div class="glossary-term">operator</div>
+                    <div class="glossary-definition">
+                        A symbol that tells the computer to perform a specific mathematical or logical operation (e.g., +, -, *, /).
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/03-fundamentals.html">JavaScript Fundamentals</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="if statement condition conditional logic branch">
+                    <div class="glossary-term">if statement</div>
+                    <div class="glossary-definition">
+                        A programming condition that executes code only when a specific condition is true.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/03-fundamentals.html">JavaScript Fundamentals</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="loop repeat iteration while for">
+                    <div class="glossary-term">loop</div>
+                    <div class="glossary-definition">
+                        A programming structure that repeats a block of code multiple times until a condition is met.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/03-fundamentals.html">JavaScript Fundamentals</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="function method procedure parameter argument return">
+                    <div class="glossary-term">function</div>
+                    <div class="glossary-definition">
+                        A reusable block of code that performs a specific task, can accept inputs (parameters) and return outputs.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/03-fundamentals.html">JavaScript Fundamentals</a></div>
                     </div>
                 </div>
             </div>
