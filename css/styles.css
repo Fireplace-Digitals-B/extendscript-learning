@@ -127,7 +127,7 @@ body {
 .nav-items a {
     display: flex;
     align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-md);
     color: var(--text);
     text-decoration: none;
     border-radius: var(--radius-md);
@@ -249,6 +249,10 @@ h3 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+
+    ol {
+        margin-left: 1rem;
+    }
 }
 
 .card::before {
@@ -477,4 +481,8 @@ pre {
 
 .theme-toggle .lesson-text {
     flex: 1;
+}
+
+.emoji {
+    -webkit-text-fill-color: white;
 }

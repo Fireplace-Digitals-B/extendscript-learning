@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals - ExtendScript Learning</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/lessons.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-header animate__animated animate__fadeIn">
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <h2>Dan's ExtendScript Journey 
+                    <span class="emoji">🎯</span></h2>
+            <p class="nav-subtitle">Let's make After Effects dance! 💃</p>
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <a href="../lessons/01-intro.html" >
+                    <span class="lesson-icon">🤔</span>
+                    <span class="lesson-text">
+                        <strong>Level 1: JavaScript vs ExtendScript</strong>
+                        <small>The basics, but make it fun!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.4s">
+                <a href="../lessons/02-variables.html">
+                    <span class="lesson-icon">💡</span>
+                    <span class="lesson-text">
+                        <strong>Level 2: Variables & Data Types</strong>
+                        <small>Making variables less... variable</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s">
+                <a href="../lessons/03-fundamentals.html" class="active">
+                    <span class="lesson-icon">✨</span>
+                    <span class="lesson-text">
+                        <strong>Level 3: JavaScript Fundamentals</strong>
+                        <small>Building on those foundations!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.8s">
+                <a href="glossary.html">
+                    <span class="lesson-icon">📚</span>
+                    <span class="lesson-text">
+                        <strong>Glossary</strong>
+                        <small>Reference for ExtendScript terms</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 1s">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span class="lesson-icon">🌙</span>
+                    <span class="lesson-text">
+                        <strong>Toggle Theme</strong>
+                        <small>Switch to dark/light mode</small>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="hero animate__animated animate__fadeIn">
+            <h1>JavaScript Fundamentals for ExtendScript <span class="emoji">🔧</span></h1>
+            <p class="hero-text">Let's learn how to make our scripts smarter and more powerful!</p>
+            <p class="hero-subtitle">Time to level up your scripting game with logic and functions 🎮</p>
+        </div>
+
+        <section class="lesson-content animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+            <div class="card">
+                <h2>Operators: Your Script's Building Blocks <span class="emoji">🎮</span></h2>
+                <p>
+                    Just like how you use buttons on your keyboard to edit videos, operators are the special symbols 
+                    we use to work with our variables. Let's learn the essential ones!
+                </p>
+
+                <div class="code-example">
+                    <h3>Math Operators</h3>
+                    <pre><code class="javascript">var layerPosition = 100 + 50;  // Addition: 150
+var duration = 10 - 2;         // Subtraction: 8
+var opacity = 100 * 0.5;       // Multiplication: 50
+var scale = 1000 / 2;         // Division: 500</code></pre>
+                </div>
+
+                <div class="tip">
+                    <span class="emoji">💡</span> Unlike modern JavaScript, ExtendScript doesn't support the ++ or += operators 
+                    in all contexts. It's safer to write out the full operation: x = x + 1
+                </div>
+            </div>
+            <div class="card">
+                <h2>Comparison Operators: Making Decisions <span class="emoji">🤔</span></h2>
+                <p>
+                    When you're editing, you make decisions all the time: "Is this clip too long?", 
+                    "Should this layer be visible?". Comparison operators help your script make similar decisions!
+                </p>
+
+                <div class="code-example">
+                    <h3>Basic Comparisons</h3>
+                    <pre><code class="javascript">var isLongEnough = duration > 5;     // Greater than
+var isTooShort = duration < 3;      // Less than
+var isPerfect = duration == 4;      // Equal to
+var needsMore = duration != 10;     // Not equal to</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Practical Examples</h3>
+                    <pre><code class="javascript">// Check if a layer is too transparent
+var isVisible = layer.opacity > 50;
+
+// See if we're at the end of the comp
+var isLastFrame = currentTime >= comp.duration;
+
+// Check if layer name matches
+var isMainTitle = layer.name == "Title";</code></pre>
+                </div>
+
+                <div class="tip">
+                    <span class="emoji">💡</span> In ExtendScript, it's safer to use == for equality comparison. 
+                    The === operator (strict equality) isn't consistently supported across all versions.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Control Flow: Making Your Script Smart <span class="emoji">🧠</span></h2>
+                <p>
+                    Just like how you make decisions while editing ("if this clip is too long, I'll trim it"), 
+                    your script can make decisions too! This is called control flow.
+                </p>
+
+                <div class="code-example">
+                    <h3>Basic if/else</h3>
+                    <pre><code class="javascript">var layerOpacity = 25;
+
+if (layerOpacity < 50) {
+    alert("This layer might be too transparent!");
+} else {
+    alert("Layer opacity looks good!");
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Multiple Conditions</h3>
+                    <pre><code class="javascript">var duration = 5;
+
+if (duration < 3) {
+    alert("Clip is too short!");
+} else if (duration > 10) {
+    alert("Clip is too long!");
+} else {
+    alert("Duration is just right!");
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Real-World Example</h3>
+                    <pre><code class="javascript">// Check layer type and handle accordingly
+if (layer instanceof TextLayer) {
+    layer.property("Source Text").setValue("Updated!");
+} else if (layer instanceof ShapeLayer) {
+    layer.property("Transform").property("Scale").setValue([200,200]);
+} else {
+    alert("Unsupported layer type!");
+}</code></pre>
+                </div>
+
+                <div class="tip">
+                    <span class="emoji">💡</span> Always use curly braces {} with your if statements in ExtendScript, 
+                    even for single lines. It makes your code more reliable and easier to update later!
+                </div>
+            </div>
+            <div class="card">
+                <h2>Loops: Doing Things Over and Over <span class="emoji">🔄</span></h2>
+                <p>
+                    Need to apply the same effect to multiple layers? Or maybe adjust every keyframe in a composition? 
+                    Loops are your best friend for repetitive tasks!
+                </p>
+
+                <div class="code-example">
+                    <h3>Basic for Loop</h3>
+                    <pre><code class="javascript">// Count from 1 to 5
+for (var i = 1; i <= 5; i = i + 1) {
+    alert("Layer " + i);
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Looping Through Layers</h3>
+                    <pre><code class="javascript">// Process all layers in comp
+for (var i = 1; i <= comp.numLayers; i = i + 1) {
+    var currentLayer = comp.layer(i);
+    currentLayer.enabled = true;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>While Loop Example</h3>
+                    <pre><code class="javascript">// Find a layer named "End"
+var layerIndex = 1;
+while (layerIndex <= comp.numLayers) {
+    var layer = comp.layer(layerIndex);
+    if (layer.name == "End") {
+        alert("Found end layer!");
+        break;  // Exit the loop
+    }
+    layerIndex = layerIndex + 1;
+}</code></pre>
+                </div>
+
+                <div class="tip">
+                    <span class="emoji">💡</span> In ExtendScript, we write i = i + 1 instead of i++ or i += 1. 
+                    Also, remember that layer indices in After Effects start at 1, not 0!
+                </div>
+
+                <div class="warning">
+                    <span class="emoji">⚠️</span> Be careful with loops! Always make sure you have a way to exit 
+                    the loop, or your script might run forever and freeze After Effects.
+                </div>
+            </div>
+            <div class="card">
+                <h2>Functions: Your Script's Super Powers <span class="emoji">⚡</span></h2>
+                <p>
+                    Functions are like creating your own custom effects in After Effects - package up a set of 
+                    actions that you can use over and over again!
+                </p>
+
+                <div class="code-example">
+                    <h3>Basic Function</h3>
+                    <pre><code class="javascript">function makeLayerVisible(layerName) {
+    var layer = app.project.activeItem.layer(layerName);
+    layer.enabled = true;
+    return "Layer " + layerName + " is now visible!";
+}
+
+// Use the function
+var message = makeLayerVisible("Background");</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Function with Multiple Parameters</h3>
+                    <pre><code class="javascript">function adjustOpacity(layerName, opacityValue) {
+    var layer = app.project.activeItem.layer(layerName);
+    if (opacityValue >= 0 && opacityValue <= 100) {
+        layer.opacity.setValue(opacityValue);
+        return true;
+    }
+    return false;
+}
+
+// Use the function
+var success = adjustOpacity("Title", 75);</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Practical Function Example</h3>
+                    <pre><code class="javascript">function scaleAllLayers(scale) {
+    var comp = app.project.activeItem;
+    for (var i = 1; i <= comp.numLayers; i = i + 1) {
+        var layer = comp.layer(i);
+        var currentScale = layer.transform.scale.value;
+        layer.transform.scale.setValue([
+            currentScale[0] * scale,
+            currentScale[1] * scale
+        ]);
+    }
+}
+
+// Scale all layers to 150%
+scaleAllLayers(1.5);</code></pre>
+                </div>
+
+                <div class="tip">
+                    <span class="emoji">💡</span> Functions make your code reusable and easier to maintain. 
+                    Instead of copying and pasting the same code, just call your function!
+                </div>
+
+                <div class="warning">
+                    <span class="emoji">⚠️</span> Remember to check if your layers exist before trying to 
+                    modify them. A missing layer can cause your script to crash!
+                </div>
+            </div>
+            <div class="card quiz-container">
+                <h2>Test Your Knowledge! <span class="emoji">🎯</span></h2>
+                <div class="quiz-questions-wrapper">
+                <div class="quiz-question active" data-question="1">
+                    <h3>Question 1:</h3>
+                    <p>In ExtendScript, what's the safest way to increment a variable?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">A</span>
+                            <span>i++</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span>i += 1</span>
+                        </div>
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">C</span>
+                            <span>i = i + 1</span>
+                        </div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h3>Question 2:</h3>
+                    <p>Which operator should you use for equality comparison in ExtendScript?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span>==</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span>===</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">C</span>
+                            <span>=</span>
+                        </div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h3>Question 3:</h3>
+                    <p>What's special about layer indexing in After Effects?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span>Layers start at index 1</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span>Layers start at index 0</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">C</span>
+                            <span>Layers are indexed alphabetically</span>
+                        </div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question result-slide" data-question="4">
+                    <div class="quiz-result"></div>
+                </div>
+            
+            </div>
+
+            <div class="quiz-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+            </div>
+        </div>
+        </section>
+        <div class="glossary">
+            <h2>📚 Glossary</h2>
+            <div class="glossary-list">
+                <div class="glossary-item">
+                    <div class="glossary-term">operator</div>
+                    <div class="glossary-definition">A symbol that tells the computer to perform a specific mathematical or logical operation (e.g., +, -, *, /).</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">if statement</div>
+                    <div class="glossary-definition">A programming condition that executes code only when a specific condition is true.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">loop</div>
+                    <div class="glossary-definition">A programming structure that repeats a block of code multiple times until a condition is met.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">function</div>
+                    <div class="glossary-definition">A reusable block of code that performs a specific task, can accept inputs (parameters) and return outputs.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="02-variables.html" class="button">← Back to Variables</a>
+            <a href="04-effects.html" class="button">Next: After Effects Magic →</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script src="../js/glossary.js"></script>
+</body>
+</html>

@@ -20,11 +20,12 @@ document.querySelectorAll('.glossary-term').forEach(term => {
 
 // Search functionality
 const searchInput = document.querySelector('.search-input');
-const noResults = document.querySelector('.no-results');
-const glossaryItems = document.querySelectorAll('.glossary-item');
-const categorySections = document.querySelectorAll('.category-section');
+if (searchInput) {
+    const noResults = document.querySelector('.no-results');
+    const glossaryItems = document.querySelectorAll('.glossary-item');
+    const categorySections = document.querySelectorAll('.category-section');
 
-searchInput.addEventListener('input', (e) => {
+    searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     let hasResults = false;
 
@@ -51,3 +52,4 @@ searchInput.addEventListener('input', (e) => {
         section.style.display = hasVisibleItems ? '' : 'none';
     });
 });
+}
