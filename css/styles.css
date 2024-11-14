@@ -369,6 +369,7 @@ h3 {
     position: relative;
     overflow: hidden;
     margin-top: auto;
+    z-index: 1;
 }
 
 .button::after {
@@ -381,6 +382,7 @@ h3 {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .button:hover {
