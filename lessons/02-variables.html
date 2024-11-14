@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Data Types - ExtendScript Essentials 📦</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/lessons.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-header animate__animated animate__fadeIn">
+            <h2>Your ExtendScript Journey 🎯</h2>
+            <p class="nav-subtitle">Let's make After Effects dance! 💃</p>
+        </div>
+        <ul class="nav-items">
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <a href="01-intro.html">
+                    <span class="lesson-icon">🤔</span>
+                    <span class="lesson-text">
+                        <strong>Level 1: JavaScript vs ExtendScript</strong>
+                        <small>The basics, but make it fun!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.4s">
+                <a href="02-variables.html" class="active">
+                    <span class="lesson-icon">💡</span>
+                    <span class="lesson-text">
+                        <strong>Level 2: Variables & Data Types</strong>
+                        <small>Making variables less... variable</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s">
+                <a href="03-extendscript.html">
+                    <span class="lesson-icon">✨</span>
+                    <span class="lesson-text">
+                        <strong>Level 3: After Effects Magic</strong>
+                        <small>Where the real fun begins!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.8s">
+                <a href="../glossary.html">
+                    <span class="lesson-icon">📚</span>
+                    <span class="lesson-text">
+                        <strong>Glossary</strong>
+                        <small>Reference for ExtendScript terms</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 1s">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span class="lesson-icon">🌙</span>
+                    <span class="lesson-text">
+                        <strong>Toggle Theme</strong>
+                        <small>Switch to dark/light mode</small>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="hero animate__animated animate__fadeIn">
+            <h1>Variables & Data Types in ExtendScript 📦</h1>
+            <p class="hero-text">Ready to level up your ExtendScript game? Let's dive into variables and data types!</p>
+            <p class="hero-subtitle">Trust me, knowing these will save you hours of debugging later 😉</p>
+        </div>
+
+        <section class="lesson-content animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+            <div class="card">
+                <h2>The Building Blocks 🧱</h2>
+                <p>In ExtendScript, variables are your containers for storing data. But there's a twist - they behave a bit differently than in modern JavaScript!</p>
+                
+                <div class="code-example">
+                    <h3>Variable Declaration 📝</h3>
+                    <pre><code class="javascript">// Always use 'var' - let and const don't exist here!
+var layerName = "My Cool Layer";
+var opacity = 75;
+var isVisible = true;
+
+// Variables are function-scoped, not block-scoped
+function adjustLayer() {
+    var opacity = 100; // Local to this function
+}
+
+// Hoisting works differently too!
+myVariable = "I exist!";
+var myVariable; // This is fine in ExtendScript</code></pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Data Types in ExtendScript 🎨</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">📝</span>
+                        <h4>String</h4>
+                        <p>"Text values for names, paths, etc."</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔢</span>
+                        <h4>Number</h4>
+                        <p>Both integers and decimals (no BigInt)</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Boolean</h4>
+                        <p>true or false values</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📦</span>
+                        <h4>Object</h4>
+                        <p>Including After Effects-specific objects!</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Data Types in Action 🎬</h3>
+                    <pre><code class="javascript">// Strings - Use for text
+var compName = "My Animation";
+var filePath = "~/Desktop/MyProject";
+
+// Numbers - Use for dimensions, time, etc.
+var width = 1920;
+var duration = 30.5;
+var opacity = 75;
+
+// Booleans - Use for conditions
+var isVisible = true;
+var isLocked = false;
+
+// Objects - After Effects specific!
+var myComp = app.project.activeItem;
+var myLayer = myComp.layer(1);
+
+// Arrays - Yes, we have these!
+var layerNames = ["Background", "Character", "Effects"];
+var positions = [0, 100, 200];</code></pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Special Considerations 🎯</h2>
+                <ul class="feature-list">
+                    <li>Numbers are always 64-bit floating-point (like modern JavaScript)</li>
+                    <li>Strings can use single or double quotes</li>
+                    <li>undefined and null both exist, but prefer null</li>
+                    <li>Array methods are limited (no map, filter, or reduce)</li>
+                </ul>
+
+                <div class="code-example">
+                    <h3>Type Checking and Conversion ✨</h3>
+                    <pre><code class="javascript">// Type checking
+var myVar = "Hello";
+$.writeln(typeof myVar);  // "string"
+
+// Type conversion
+var numStr = "42";
+var actualNum = Number(numStr);  // Convert to number
+var backToString = String(actualNum);  // Convert to string
+
+// Working with arrays
+var layers = ["Background", "Character"];
+$.writeln(layers.length);  // 2
+layers.push("Effects");    // Add new item
+layers.pop();             // Remove last item</code></pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Real-World Example: Layer Properties 🎨</h2>
+                <p>Let's put it all together with a practical After Effects example:</p>
+                <pre><code class="javascript">// Create a function to adjust layer properties
+function adjustLayer(layerName, properties) {
+    // Get the active composition
+    var comp = app.project.activeItem;
+    if (!comp || !(comp instanceof CompItem)) {
+        alert("Please select a composition!");
+        return;
+    }
+
+    // Find our layer by name
+    var layer = null;
+    for (var i = 1; i <= comp.numLayers; i++) {
+        if (comp.layer(i).name === layerName) {
+            layer = comp.layer(i);
+            break;
+        }
+    }
+
+    // Apply the properties
+    if (layer) {
+        if (properties.opacity !== undefined) {
+            layer.opacity.setValue(properties.opacity);
+        }
+        if (properties.position) {
+            layer.position.setValue(properties.position);
+        }
+        if (properties.scale !== undefined) {
+            layer.scale.setValue(properties.scale);
+        }
+    }
+}
+
+// Use the function
+adjustLayer("My Layer", {
+    opacity: 75,
+    position: [960, 540],
+    scale: [100, 100, 100]
+});</code></pre>
+                
+                <p class="tip">💡 Pro Tip: Always check if objects exist before accessing their properties. After Effects objects can be null or undefined!</p>
+            </div>
+
+            <div class="card">
+                <h2>Practice Time! 🎯</h2>
+                <p>Try this exercise in After Effects:</p>
+                <pre><code class="javascript">// Create a simple script that:
+// 1. Creates a text layer
+// 2. Sets its properties
+// 3. Animates it!
+
+var comp = app.project.activeItem;
+if (comp && comp instanceof CompItem) {
+    // Create text layer
+    var textLayer = comp.layers.addText("Hello ExtendScript!");
+    
+    // Set initial properties
+    var textProp = textLayer.property("Source Text");
+    var textDocument = textProp.value;
+    textDocument.fontSize = 72;
+    textDocument.fillColor = [1, 1, 1];
+    textProp.setValue(textDocument);
+    
+    // Animate opacity
+    var opacityProp = textLayer.opacity;
+    opacityProp.setValueAtTime(0, 0);    // Start at 0%
+    opacityProp.setValueAtTime(1, 100);  // End at 100%
+}</code></pre>
+            </div>
+        </section>
+        <div class="glossary">
+            <h2>📚 Glossary</h2>
+            <div class="glossary-list">
+                <div class="glossary-item">
+                    <div class="glossary-term">function-scoped</div>
+                    <div class="glossary-definition">Variables declared with 'var' are only accessible within the function where they're declared. If declared outside any function, they become global variables.</div>
+                </div>
+                
+                <div class="glossary-item">
+                    <div class="glossary-term">block-scoped</div>
+                    <div class="glossary-definition">Variables that are only accessible within the block of code where they're declared (between curly braces {}). This is how 'let' and 'const' work in modern JavaScript, but isn't available in ExtendScript.</div>
+                </div>
+                
+                <div class="glossary-item">
+                    <div class="glossary-term">hoisting</div>
+                    <div class="glossary-definition">A JavaScript behavior where variable and function declarations are moved to the top of their scope during code execution. This means you can use a variable before it's declared (though it's not recommended).</div>
+                </div>
+                
+                <div class="glossary-item">
+                    <div class="glossary-term">BigInt</div>
+                    <div class="glossary-definition">A modern JavaScript data type for working with very large integers. It's not available in ExtendScript, which only uses regular numbers (up to 2^53 - 1).</div>
+                </div>
+                
+                <div class="glossary-item">
+                    <div class="glossary-term">array</div>
+                    <div class="glossary-definition">A list-like object that can store multiple values in a single variable. In ExtendScript, arrays can hold any type of data but have limited methods compared to modern JavaScript.</div>
+                </div>
+                
+                <div class="glossary-item">
+                    <div class="glossary-term">object</div>
+                    <div class="glossary-definition">A container for related data and/or functions. In ExtendScript, objects are especially important as they're used to interact with After Effects (like app.project or comp.layer).</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="01-intro.html" class="button">← Back to Intro</a>
+            <a href="03-extendscript.html" class="button">Next: After Effects Magic →</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+
+        // Accordion functionality for glossary
+        document.querySelectorAll('.glossary-term').forEach(term => {
+            term.addEventListener('click', () => {
+                const definition = term.nextElementSibling;
+                const isActive = term.classList.contains('active');
+
+                // Close all terms
+                document.querySelectorAll('.glossary-term').forEach(t => {
+                    t.classList.remove('active');
+                    t.nextElementSibling.classList.remove('active');
+                });
+
+                // Toggle clicked term
+                if (!isActive) {
+                    term.classList.add('active');
+                    definition.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

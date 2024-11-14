@@ -1,0 +1,188 @@
+/* lessons.css - Styles specific to lesson pages */
+
+/* Lesson Content Layout */
+.lesson-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Code Comparison Section */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.modern-js, .extendscript {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.modern-js h3 {
+    color: var(--accent-2);
+}
+
+.extendscript h3 {
+    color: var(--accent-1);
+}
+
+/* Code Examples */
+.code-example {
+    margin: var(--spacing-lg) 0;
+}
+
+/* Feature Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.feature-item {
+    background: var(--surface);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+/* Tips and Notes */
+.tip {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Navigation */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0;
+}
+
+.feature-list li {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.feature-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .navigation-buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Glossary Styles */
+.glossary {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.glossary h2 {
+    color: var(--accent-1);
+    margin-bottom: var(--spacing-md);
+}
+
+.glossary-list {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.glossary-item {
+    background: rgba(124, 58, 237, 0.05);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.glossary-term {
+    color: var(--accent-2);
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.glossary-term::after {
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.glossary-term.active::after {
+    transform: rotate(180deg);
+}
+
+.glossary-definition {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text);
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.glossary-definition.active {
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    max-height: 200px;
+    opacity: 1;
+}
+
+.glossary-item:hover {
+    background: rgba(124, 58, 237, 0.1);
+}

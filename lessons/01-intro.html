@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript vs ExtendScript - The Time Traveler's Guide 🚀</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/lessons.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-header animate__animated animate__fadeIn">
+            <h2>Your ExtendScript Journey 🎯</h2>
+            <p class="nav-subtitle">Let's make After Effects dance! 💃</p>
+        </div>
+        <ul class="nav-items">
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <a href="01-intro.html" class="active">
+                    <span class="lesson-icon">🤔</span>
+                    <span class="lesson-text">
+                        <strong>Level 1: JavaScript vs ExtendScript</strong>
+                        <small>The basics, but make it fun!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.4s">
+                <a href="02-variables.html">
+                    <span class="lesson-icon">💡</span>
+                    <span class="lesson-text">
+                        <strong>Level 2: Variables & Data Types</strong>
+                        <small>Making variables less... variable</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s">
+                <a href="03-extendscript.html">
+                    <span class="lesson-icon">✨</span>
+                    <span class="lesson-text">
+                        <strong>Level 3: After Effects Magic</strong>
+                        <small>Where the real fun begins!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.8s">
+                <a href="../glossary.html">
+                    <span class="lesson-icon">📚</span>
+                    <span class="lesson-text">
+                        <strong>Glossary</strong>
+                        <small>Reference for ExtendScript terms</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 1s">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span class="lesson-icon">🌙</span>
+                    <span class="lesson-text">
+                        <strong>Toggle Theme</strong>
+                        <small>Switch to dark/light mode</small>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="hero animate__animated animate__fadeIn">
+            <h1>JavaScript vs ExtendScript: A Time Travel Adventure! 🚀</h1>
+            <p class="hero-text">Hey Dan! Ever felt like ExtendScript is JavaScript from another era? Well... you're not wrong! 😄</p>
+            <p class="hero-subtitle">Let's explore why ExtendScript feels a bit... vintage, and how to make the most of it! 🎬</p>
+        </div>
+
+        <section class="lesson-content animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+            <div class="card">
+                <h2>The Time Machine Effect 🕰️</h2>
+                <p>Imagine you're a time traveler who knows modern JavaScript, but you've landed in the early 2000s. That's basically what using ExtendScript feels like! Here's why:</p>
+                
+                <div class="comparison-grid">
+                    <div class="modern-js">
+                        <h3>Modern JavaScript (Your Comfort Zone)</h3>
+                        <pre><code class="javascript">// Modern JavaScript
+const videoLayers = ['intro', 'main', 'outro'];
+videoLayers.forEach(layer => {
+    console.log(`Processing ${layer}...`);
+});
+
+// Using modern features
+const settings = {
+    duration: 5,
+    effects: ['fade', 'blur']
+};
+
+const { duration, effects } = settings;</code></pre>
+                    </div>
+                    
+                    <div class="extendscript">
+                        <h3>ExtendScript (Time Travel Mode)</h3>
+                        <pre><code class="javascript">// ExtendScript
+var videoLayers = ['intro', 'main', 'outro'];
+for (var i = 0; i < videoLayers.length; i++) {
+    $.writeln("Processing " + videoLayers[i] + "...");
+}
+
+// No destructuring - old school way
+var settings = {
+    duration: 5,
+    effects: ['fade', 'blur']
+};
+
+var duration = settings.duration;
+var effects = settings.effects;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Key Differences to Remember 🗝️</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">📜</span>
+                        <h4>ECMAScript 3</h4>
+                        <p>ExtendScript is based on ES3 (circa 2000). No fancy arrow functions or template literals here!</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔄</span>
+                        <h4>var Only</h4>
+                        <p>Forget let and const - var is your new (old) best friend</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📝</span>
+                        <h4>$.writeln()</h4>
+                        <p>console.log? Nope! We use $.writeln() for logging</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <h4>After Effects Objects</h4>
+                        <p>Special objects like app and project are your gateway to AE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>The Good News! 🌟</h2>
+                <p>Even though ExtendScript feels like a blast from the past, it's still incredibly powerful for After Effects automation. Here's what you can do:</p>
+                
+                <ul class="feature-list">
+                    <li>🎬 Control compositions programmatically</li>
+                    <li>🎨 Create and modify layers</li>
+                    <li>⚡ Apply and adjust effects</li>
+                    <li>🚀 Automate repetitive tasks</li>
+                </ul>
+
+                <div class="code-example">
+                    <h3>Your First ExtendScript Magic ✨</h3>
+                    <pre><code class="javascript">// Create a new composition
+var comp = app.project.items.addComp(
+    "My Awesome Comp",    // name
+    1920, 1080,          // width, height
+    1,                   // pixel aspect
+    30,                  // duration (seconds)
+    24                   // frame rate
+);
+
+// Add a solid layer
+var solid = comp.layers.addSolid(
+    [1, 0, 0],          // RGB color (red)
+    "Red Solid",        // name
+    comp.width,         // width
+    comp.height,        // height
+    1                   // pixel aspect
+);</code></pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Quick Tips for Time Travelers 🧙‍♂️</h2>
+                <ul class="feature-list">
+                    <li>🔍 Always use var for variables</li>
+                    <li>📝 Use $.writeln() for debugging</li>
+                    <li>🎯 Keep your code simple and straightforward</li>
+                    <li>🚀 Test small chunks of code before building bigger scripts</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Ready for Your First Mission? 🎯</h2>
+                <p>Try running this simple script in After Effects to get started:</p>
+                <pre><code class="javascript">// Your first ExtendScript
+alert("Hello After Effects!");
+$.writeln("Script running...");
+
+// Get project info
+var project = app.project;
+$.writeln("Project name: " + project.file ? project.file.name : "Unsaved Project");
+$.writeln("Number of items: " + project.items.length);</code></pre>
+                
+                <p class="tip">💡 Pro Tip: Save this as a .jsx file and run it from After Effects' File > Scripts > Run Script File...</p>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="../index.html" class="button">← Back to Home</a>
+            <a href="02-variables.html" class="button">Next: Variables & Data Types →</a>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

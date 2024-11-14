@@ -1,0 +1,112 @@
+.search-container {
+    margin: var(--spacing-lg) 0;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    background: var(--background);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid rgba(124, 58, 237, 0.1);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    background: var(--surface);
+    color: var(--text);
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.category-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.category-title {
+    color: var(--accent-1);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid rgba(124, 58, 237, 0.1);
+}
+
+.no-results {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--text);
+    font-style: italic;
+    display: none;
+}
+
+.lesson-reference {
+    font-size: 0.9em;
+    color: var(--accent-2);
+    margin-top: var(--spacing-sm);
+}
+
+.lesson-reference a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.lesson-reference a:hover {
+    text-decoration: underline;
+}
+
+/* Glossary items and accordion functionality */
+.glossary-list {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.glossary-item {
+    background: rgba(124, 58, 237, 0.05);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.glossary-term {
+    color: var(--accent-2);
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    cursor: pointer;
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.glossary-term::after {
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.glossary-term.active::after {
+    transform: rotate(180deg);
+}
+
+.glossary-definition {
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.glossary-definition.active {
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    max-height: 200px;
+    opacity: 1;
+}
+
+.glossary-item:hover {
+    background: rgba(124, 58, 237, 0.1);
+}

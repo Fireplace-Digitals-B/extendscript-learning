@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExtendScript Glossary 📚</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lessons.css">
+    <link rel="stylesheet" href="css/glossary.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-header animate__animated animate__fadeIn">
+            <h2>ExtendScript Reference 📚</h2>
+            <p class="nav-subtitle">Your complete guide to ExtendScript terms!</p>
+        </div>
+        <ul class="nav-items">
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <a href="index.html">
+                    <span class="lesson-icon">🏠</span>
+                    <span class="lesson-text">
+                        <strong>Back to Home</strong>
+                        <small>Return to main page</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="hero animate__animated animate__fadeIn">
+            <h1>ExtendScript Glossary 📚</h1>
+            <p class="hero-text">Your complete reference for ExtendScript terminology!</p>
+            <p class="hero-subtitle">Search, learn, and master the language of After Effects automation 🎯</p>
+        </div>
+
+        <div class="search-container animate__animated animate__fadeInDown">
+            <input type="text" class="search-input" placeholder="Search terms... (e.g., 'function', 'array', 'object')" />
+        </div>
+
+        <div class="no-results">
+            <h3>No matching terms found 🔍</h3>
+            <p>Try a different search term or browse by category below.</p>
+        </div>
+        <section class="category-section">
+            <h2 class="category-title">Variables & Scope 🔍</h2>
+            <div class="glossary-list">
+                <div class="glossary-item" data-terms="function scope var variable declaration">
+                    <div class="glossary-term">function-scoped</div>
+                    <div class="glossary-definition">
+                        Variables declared with 'var' are only accessible within the function where they're declared. If declared outside any function, they become global variables.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="block scope let const variable declaration">
+                    <div class="glossary-term">block-scoped</div>
+                    <div class="glossary-definition">
+                        Variables that are only accessible within the block of code where they're declared (between curly braces {}). This is how 'let' and 'const' work in modern JavaScript, but isn't available in ExtendScript.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="hoisting variable declaration function">
+                    <div class="glossary-term">hoisting</div>
+                    <div class="glossary-definition">
+                        A JavaScript behavior where variable and function declarations are moved to the top of their scope during code execution. This means you can use a variable before it's declared (though it's not recommended).
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">Data Types 📦</h2>
+            <div class="glossary-list">
+                <div class="glossary-item" data-terms="bigint number integer large numbers">
+                    <div class="glossary-term">BigInt</div>
+                    <div class="glossary-definition">
+                        A modern JavaScript data type for working with very large integers. It's not available in ExtendScript, which only uses regular numbers (up to 2^53 - 1).
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="array list collection data structure">
+                    <div class="glossary-term">array</div>
+                    <div class="glossary-definition">
+                        A list-like object that can store multiple values in a single variable. In ExtendScript, arrays can hold any type of data but have limited methods compared to modern JavaScript.
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+                <div class="glossary-item" data-terms="object data structure properties methods">
+                    <div class="glossary-term">object</div>
+                    <div class="glossary-definition">
+                        A container for related data and/or functions. In ExtendScript, objects are especially important as they're used to interact with After Effects (like app.project or comp.layer).
+                        <div class="lesson-reference">📖 Learn more in <a href="lessons/02-variables.html">Variables & Data Types</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="button">← Back to Home</a>
+        </div>
+    </main>
+    <script src="js/glossary.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExtendScript Adventures! 🚀</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Fira+Code&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-header animate__animated animate__fadeIn">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <h2>ExtendScript Reference 📚</h2>
+                <p class="nav-subtitle">Your complete guide to ExtendScript terms!</p>
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <a href="lessons/01-intro.html" class="active">
+                    <span class="lesson-icon">🤔</span>
+                    <span class="lesson-text">
+                        <strong>Level 1: JavaScript vs ExtendScript</strong>
+                        <small>The basics, but make it fun!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.4s">
+                <a href="lessons/02-variables.html">
+                    <span class="lesson-icon">💡</span>
+                    <span class="lesson-text">
+                        <strong>Level 2: Variables & Data Types</strong>
+                        <small>Making variables less... variable</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s">
+                <a href="lessons/03-extendscript.html">
+                    <span class="lesson-icon">✨</span>
+                    <span class="lesson-text">
+                        <strong>Level 3: After Effects Magic</strong>
+                        <small>Where the real fun begins!</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.8s">
+                <a href="glossary.html">
+                    <span class="lesson-icon">📚</span>
+                    <span class="lesson-text">
+                        <strong>Glossary</strong>
+                        <small>Reference for ExtendScript terms</small>
+                    </span>
+                </a>
+            </li>
+            <li class="animate__animated animate__fadeInLeft" style="animation-delay: 1s">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <span class="lesson-icon">🌙</span>
+                    <span class="lesson-text">
+                        <strong>Toggle Theme</strong>
+                        <small>Switch to dark/light mode</small>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="hero animate__animated animate__fadeIn">
+            <h1>Welcome to ExtendScript Adventures! 🎬</h1>
+            <p class="hero-text">Hey Dan! Ready to become an After Effects automation wizard? 🧙‍♂️</p>
+            <p class="hero-subtitle">No more repetitive tasks - we're going to make AE work FOR you! ⚡</p>
+        </div>
+        
+        <section class="course-overview animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+            <div class="card achievement-card">
+                <div class="card-header">
+                    <span class="achievement-icon">🏆</span>
+                    <h3>JavaScript vs ExtendScript</h3>
+                </div>
+                <p>Ever wondered why ExtendScript feels like JavaScript's quirky cousin? Let's break it down!</p>
+                <ul class="feature-list">
+                    <li>🎯 Clear explanations</li>
+                    <li>🎮 Interactive examples</li>
+                    <li>🎨 Real AE scenarios</li>
+                </ul>
+                <a href="lessons/01-intro.html" class="button">Begin Your Journey →</a>
+            </div>
+            
+            <div class="card achievement-card">
+                <div class="card-header">
+                    <span class="achievement-icon">⚡</span>
+                    <h3>Variables & Data Types</h3>
+                </div>
+                <p>Level up your JavaScript knowledge with an ExtendScript twist!</p>
+                <ul class="feature-list">
+                    <li>🎲 Fun exercises</li>
+                    <li>🎯 Practical examples</li>
+                    <li>🎨 Visual explanations</li>
+                </ul>
+                <a href="lessons/02-variables.html" class="button">Power Up →</a>
+            </div>
+            
+            <div class="card achievement-card">
+                <div class="card-header">
+                    <span class="achievement-icon">🚀</span>
+                    <h3>After Effects Magic</h3>
+                </div>
+                <p>Time to make After Effects dance to your tune!</p>
+                <ul class="feature-list">
+                    <li>🎬 Real-world automation</li>
+                    <li>⚡ Time-saving tricks</li>
+                    <li>🎨 Creative solutions</li>
+                </ul>
+                <a href="lessons/03-extendscript.html" class="button">Unleash the Magic →</a>
+            </div>
+        </section>
+
+        <section class="quick-start animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+            <h2>Why ExtendScript? 🤖</h2>
+            <div class="card feature-card">
+                <h3>Transform Your Workflow!</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎬</span>
+                        <h4>Batch Processing</h4>
+                        <p>Process hundreds of comps in seconds!</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <h4>Auto-Organization</h4>
+                        <p>Keep your projects tidy, automatically!</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <h4>Dynamic Animation</h4>
+                        <p>Create complex animations with code!</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚀</span>
+                        <h4>Time Travel</h4>
+                        <p>Okay, not really... but it'll feel like it!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        
+        // Add some fun hover effects
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('.feature-icon').style.transform = 'scale(1.2) rotate(10deg)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('.feature-icon').style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
